@@ -211,7 +211,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll));
               <span class="mv-tile-ic"><Ic name="doc" :size="22" /></span>
               <h3>Resumo do módulo</h3>
               <p>Os pontos principais em poucos minutos de leitura.</p>
-              <div class="mv-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img class="mv-tile-img" src="/img/resumo.webp" alt="" width="150" height="132" loading="lazy" />
               <span class="mv-cost">{{ formatCost(custos.resumo) }}</span>
             </article>
 
@@ -477,6 +477,10 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll));
 .mv-lines i { height: 8px; border-radius: 99px; background: linear-gradient(90deg, #D9CCF5, #EEE8FA); }
 .mv-lines i:nth-child(1) { width: 92%; } .mv-lines i:nth-child(2) { width: 74%; } .mv-lines i:nth-child(3) { width: 84%; }
 .mv-tile--resumo .mv-cost, .mv-tile--pod .mv-cost { margin-top: auto; }
+.mv-tile--resumo { background: radial-gradient(260px 220px at 100% 100%, rgba(77,159,255,.14), transparent 70%), #fff; }
+.mv-tile--resumo p { max-width: calc(100% - 104px); margin-bottom: 18px; }
+.mv-tile--resumo .mv-tile-img { position: absolute; right: -10px; bottom: -6px; width: 140px; height: 123px; object-fit: contain; transition: transform .5s var(--ease-o); }
+.mv-tile--resumo:hover .mv-tile-img { transform: translateY(-6px) rotate(-3deg); }
 .mv-tile--pod { padding-right: 112px; background: radial-gradient(260px 220px at 100% 100%, rgba(180,77,255,.16), transparent 70%), #fff; }
 .mv-tile--pod p { margin-bottom: 18px; }
 .mv-tile--pod .mv-tile-img { position: absolute; right: -14px; bottom: -12px; width: 128px; height: 160px; object-fit: contain; transition: transform .5s var(--ease-o); }
@@ -607,7 +611,8 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll));
   .mv-tile-bot { position: static; width: 170px !important; margin-bottom: -30px; }
   .mv-tile--map { flex-direction: column; align-items: stretch; }
   .mv-tile--map .mv-tile-img { align-self: center; width: 200px; height: 200px; margin: 0 0 -26px; }
-  .mv-tile--pod { padding-right: 30px; padding-bottom: 150px; }
+  .mv-tile--pod, .mv-tile--resumo { padding-right: 30px; padding-bottom: 150px; }
+  .mv-tile--resumo p { max-width: none; }
   .mv-topic-status { display: none; }
   .mv :deep(.mentor-chat) { height: 500px !important; }
   .mv-final-logo { width: 280px !important; }
