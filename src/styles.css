@@ -1,0 +1,20 @@
+/* Tokens da marca Mentor IA (mesmos valores da plataforma EAD JML). */
+:root {
+  --fs-2xs: 12px; --fs-xs: 13px; --fs-sm: 14.5px; --fs-md: 16px; --fs-lg: 17px; --fs-xl: 19px;
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 120ms; --t-base: 180ms; --t-slow: 260ms;
+
+  /* usados pelo chat de demonstração */
+  --mn-ink: #14161D; --mn-ink-2: #3A3F4E;
+  --mentor-grad: linear-gradient(90deg, #4D9FFF, #8D5BD8, #B44DFF);
+  --mentor-sans: 'Manrope', system-ui, sans-serif;
+  --mentor-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: #F6F5FA; color: #12131C; font-family: 'Manrope', system-ui, sans-serif; }
+img { max-width: 100%; }
+button { font: inherit; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
